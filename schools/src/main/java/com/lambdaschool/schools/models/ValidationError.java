@@ -5,7 +5,9 @@ public class ValidationError
     private String fieldname;
     private String message;
 
-    public ValidationError(){ }
+    public ValidationError(){
+
+    }
 
     public String getFieldname()
     {

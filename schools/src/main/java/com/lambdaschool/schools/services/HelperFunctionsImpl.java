@@ -35,13 +35,11 @@ public class HelperFunctionsImpl implements HelperFunctions {
                 //MethodArgumentNotValidException
                 MethodArgumentNotValidException ex = (MethodArgumentNotValidException) cause;
                 List<FieldError> fieldErrors = ex.getBindingResult().getFieldErrors();
-                for (FieldError fe : fieldErrors)
-                {
+                for (FieldError fe : fieldErrors) {
                     ValidationError newVE = new ValidationError();
                     newVE.setFieldname(fe.getField());
                     newVE.setMessage(fe.getDefaultMessage());
                     listVE.add(newVE);
-
                 }
             }
         }

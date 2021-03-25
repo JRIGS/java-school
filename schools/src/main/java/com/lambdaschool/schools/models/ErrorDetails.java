@@ -1,6 +1,5 @@
 package com.lambdaschool.schools.models;
 
-import org.springframework.boot.context.properties.bind.validation.ValidationErrors;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,7 +12,7 @@ public class ErrorDetails
     private String details;
     private Date timestamp;
     private String developermessage;
-    private List<ValidationErrors> errors = new ArrayList<>();
+    private List<ValidationError> errors = new ArrayList<>();
 
     public ErrorDetails() {
 
@@ -59,12 +58,12 @@ public class ErrorDetails
         this.developermessage = developermessage;
     }
 
-    public List<ValidationErrors> getErrors()
+    public List<ValidationError> getErrors()
     {
         return errors;
     }
 
-    public void setErrors(List<ValidationErrors> errors)
+    public void setErrors(List<ValidationError> errors)
     {
         this.errors = errors;
     }
